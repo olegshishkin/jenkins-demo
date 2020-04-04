@@ -6,7 +6,6 @@ pipeline {
         stage('docker test') {
             agent {
                 docker {
-                    label 'docker'
                     image 'maven:latest'
                 }
             }
