@@ -2,7 +2,6 @@ pipeline {
     agent {
         label 'docker'
     }
-    agent {docker {image 'maven:latest'}}
     stages {
         stage('docker test') {
             agent {
