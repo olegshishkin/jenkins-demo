@@ -1,9 +1,12 @@
 pipeline {
-    agent none
+    agent {
+        label 'myDocker'
+    }
     stages {
         stage('docker test') {
             agent {
                 docker {
+                    label 'myDocker'
                     image 'maven:latest'
                 }
             }
