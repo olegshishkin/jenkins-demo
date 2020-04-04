@@ -1,19 +1,6 @@
 pipeline {
-    agent {
-        label 'myDocker'
-    }
+    agent {docker {image 'maven:latest'}}
     stages {
-        stage('docker test') {
-            agent {
-                docker {
-                    label 'myDocker'
-                    image 'maven:latest'
-                }
-            }
-            steps {
-                sh 'docker --version'
-            }
-        }
         stage('build') {
             steps {
                 sh 'mvn --version'
