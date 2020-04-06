@@ -4,6 +4,7 @@ pipeline {
         stage('initial') {
             steps {
                 sh 'ls -alh /'
+                sh 'cat etc/fstab'
             }
         }
     }
