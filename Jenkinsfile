@@ -6,7 +6,7 @@ pipeline {
                 sh 'ls -alh /'
             }
             steps {
-                sh 'echo 'Done''
+                sh 'echo 'Doe''
             }
         }
     }
