@@ -5,6 +5,9 @@ pipeline {
             steps {
                 sh 'ls -alh /'
             }
+            steps {
+                sh 'echo 'Done''
+            }
         }
     }
 }
