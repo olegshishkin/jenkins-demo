@@ -26,7 +26,10 @@ pipeline {
       success {
         sh 'echo "Done"'
       }
-      failed {
+      unstable {
+        sh 'echo "Uups"'
+      }
+      failure {
         sh 'echo "Not done"'
       }
     }
