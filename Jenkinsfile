@@ -1,20 +1,17 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:7-alpine' }
+    }
     stages {
-        stage('initial') {
+        stage('Test') {
             steps {
-                sh 'ls -alh /'
-                sh 'echo "Done!"'
-                sh 'ls -a ~'
+                sh 'node --version'
             }
         }
     }
     post {
       success {
-        echo 'Goooooood:)'
-      }
-      failure {
-        echo 'Oh, noooooo!'
+        sh 'echo "Done"'
       }
     }
 }
